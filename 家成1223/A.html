@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./restset.css" rel="stylesheet">
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        ul{
+            list-style: none;
+        }
+        .flex{
+            display: inline-flex;
+        }
+        .position-fixed {
+            position: fixed;
+            left: 0;
+            right: 0;
+        }
+        .justify-content-center{
+            justify-content: center;
+        }
+        .justify-content-around{
+            justify-content: space-around;
+        }
+
+        .justify-content-between{
+            justify-content: space-between;
+        }
+        .align-items-center{
+            align-items: center;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .position-fixed {
+            position: fixed;
+            left: 0;
+            right: 0;
+        }
+        .position-relative{
+            position: relative;
+        }
+        .position-absolute{
+            position: absolute;
+        }
+        .pt-28{
+            padding:28px 0;
+            background-color: #FFFF;
+        }
+        .px-24{
+            padding-left: 24px;
+            padding-right: 24px;
+ 
+        }
+        .px-20{
+            padding-left: 20px;
+        }
+        header a{
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 36px;
+            color: #9C9C9C;    
+            text-decoration: none;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .logo h5{
+            font-family: Heiti TC;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 41px;
+            color: #616161;
+            transform: matrix(1, 0, 0.03, 1, 0, 0);
+        }
+        .banner {
+            background-image: url(./img/unsplash_LoXAzkLtmFA.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 1200px;
+        }
+        .w-100{
+            width: 100%;
+        }
+        .s1text1{
+            font-family: Noto Sans CJK TC;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 71px;
+            color: #151515;
+            padding-top: 240px;
+            padding-bottom: 16px;
+        }
+        .s1text2{
+            font-family: Noto Sans CJK TC;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 32px;
+            line-height: 47px;
+            color: #343434;
+        }
+        .pt-56{
+            padding-top: 56px;
+        }
+        .px-105{
+            padding-left: 105px;
+        }
+        .h-1200{
+            height: 1200px;
+        }
+        .card {
+            margin: auto;
+            border-radius: 20px;
+            /* background: #FFF; */
+            /* filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1)); */
+            box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .card-img{
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .card-content {
+            /* padding: 4px 14px; */
+            padding-left: 4px;
+            padding-right: 4px;
+            height: 23px;
+        }
+        .card-title{
+            font-family: Noto Sans CJK TC;
+            font-weight:normal;
+            font-size: 24px;
+            line-height: 36px;
+            color: #434343;
+            padding-top: 20px;
+            padding-bottom: 8px;
+        }
+        .card-icon {
+            width: 15px;
+            height: 15px;
+        }
+        .card-icon img{
+            height: 100%;
+        }
+        img {
+            max-width: 100%;;
+            display: block;
+        }
+        .inset{
+            width: 415px;
+            height: 306px;
+        }
+        .h-100{
+            height: 100%;
+        }
+        .inset {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .card-content {
+            height: 140px;
+            padding-left: 32px;
+            padding-right: 15px;
+            /* padding: 13px 15px 17px 32px; */
+         }
+
+        .card-icon {
+            width: 30px;
+            height: 30px;
+        }
+        .flex-grow-1 {
+            flex-grow: 1;
+        }
+        .flex-shrink-0 {
+            flex-shrink: 0;
+        }
+        .text-ellipsis {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .w-500{
+            width: 500px;
+        }
+        .pt-8{
+            padding-top: 8px;
+        }
+        .card-text{
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            font-family: Noto Sans CJK TC;
+            color: #616161;
+        }
+        .pt-192{
+            padding-top: 192px;
+        }
+        .px-185{
+            padding-left: 185px;
+        }
+        .px-56{
+            padding-right: 56px;
+        }
+        #left a{
+            background-image: url(./img/left.png);
+            display: block;
+            font-size: 0; 
+            height: 78px;/*圖片高度*/
+            width: 80px;/*圖片寬度*/
+            background-size: cover;
+        }
+        #left a:hover {
+            background: url("./img/Directleft.png"); 
+            background-size: cover;
+        }
+        #right a{
+            background-image: url(./img/right.png);
+            display: block;
+            font-size: 0; 
+            height: 78px;/*圖片高度*/
+            width: 80px;/*圖片寬度*/
+            background-size: cover;
+        }
+        #right a:hover {
+            background: url("./img/Directright.png"); 
+            background-size: cover;
+        }   
+        .px-64{
+            padding-right: 64px;
+        }
+        .taget-img{
+            position: absolute;
+            padding-left: 354px;
+            padding-top: 16px;
+        }
+        #taget a{
+            background-image: url(./img/T.png);
+            display: block;
+            font-size: 0; 
+            height: 45px;/*圖片高度*/
+            width: 45px;/*圖片寬度*/
+            background-size: cover;
+        }
+        #taget a:hover {
+            background: url("./img/Ti.png"); 
+            background-size: cover;
+            
+        }
+        #taget2 a{
+            background-image: url(./img/T.png);
+            display: block;
+            font-size: 0; 
+            height: 45px;/*圖片高度*/
+            width: 45px;/*圖片寬度*/
+            background-size: cover;
+        }
+        #taget2 a:hover {
+            background: url("./img/Ti.png"); 
+            background-size: cover;
+            
+        }
+        #taget3 a{
+            background-image: url(./img/T.png);
+            display: block;
+            font-size: 0; 
+            height: 45px;/*圖片高度*/
+            width: 45px;/*圖片寬度*/
+            background-size: cover;
+        }
+        #taget3 a:hover {
+            background: url("./img/Ti.png"); 
+            background-size: cover;            
+        }
+        .s2-back{
+            background-image: url(./img/s2-back.png);
+            width: 100%;
+            height: 681px;
+            opacity: 0.5;
+        }
+        .s2-title{
+            font-family: Noto Sans CJK TC;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 71px;
+            color: #151515;   
+            position: absolute;
+        }
+        .yellow-border{
+            border: 9px solid #FFEC3D;
+            width: 373px;
+            height: 0px;
+            margin-top: 35px;
+        }
+        #left2 a{
+            background-image: url(./img/left.png);
+            display: block;
+            font-size: 0; 
+            height: 78px;/*圖片高度*/
+            width: 80px;/*圖片寬度*/
+            background-size: cover;
+        }
+        #left2 a:hover {
+            background: url("./img/Directleft.png"); 
+            background-size: cover;
+        }
+        #right2 a{
+            background-image: url(./img/right.png);
+            display: block;
+            font-size: 0; 
+            height: 78px;/*圖片高度*/
+            width: 80px;/*圖片寬度*/
+            background-size: cover;
+        }
+        #right2 a:hover {
+            background: url("./img/Directright.png"); 
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header class="flex position-fixed  align-items-center pt-28 px-24 justify-content-between">
+        <div class="logo">
+            <h5>YO ! Taiwan</h5>
+        </div>
+                <div class=""><a href="javascript:;">找景點</a></div>
+                <div class="px-20"><a href="javascript:;">找美食</a></div>
+                <div class="px-20"><a href="javascript:;">找活動</a></div>
+                <div class="px-20"><a href="javascript:;">找旅宿</a></div>
+                <div class="px-20"><a href="javascript:;">找交通</a></div>
+    </header>
+    <main class="">
+        <div class="banner"></div>
+        <section class="h-1200 flex">
+            <div class="px-105">
+                <div class="s1text1">不知道要去哪裡嗎？</div>
+                <div class="s1text2">看看大家都去哪裡吧！</div>
+                <div class="flex">
+                    <div id=left class="pt-56 px-64"><a href="#">left</a></div>
+                    <div id=right class="pt-56"><a href="#">right</a></div>
+                </div>    
+            </div> 
+            <div class="col-50 col-lg-25 px-185 pt-192 px-56 flex-shrink-0">
+                <div class="card">
+                    <div class="card-img p-size-85 flex position-relative">
+                        <img class=" inset" src="./img/1921.png" alt="">
+                        <div id=taget class="taget-img"><a href="###">taget</a></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="align-items-center h-100 ">
+                            <div class="card-title text-ellipsis flex-grow-1">小琉球自淺之旅山</div>
+                                <div class="card-icon flex-shrink-0">
+                                    <div class="flex w-500 pt-8 card-text">
+                                        <img src="./img/Vector.png" alt="">2021年12月03日-2021年12月06日
+                                    </div>
+                                    <div class="flex w-500 pt-8 card-text">
+                                        <img src="./img/G.png" alt="">屏東縣
+                                    </div>   
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="col-50 col-lg-25 px-56 pt-192 flex-shrink-0">
+                <div class="card">
+                    <div class="card-img p-size-85 flex position-relative">
+                        <img class=" inset" src="./img/1921.png" alt="">
+                        <div id=taget2 class="taget-img"><a href="###">taget</a></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="align-items-center h-100 ">
+                            <div class="card-title text-ellipsis flex-grow-1">小琉球自淺之旅山</div>
+                                <div class="card-icon flex-shrink-0">
+                                    <div class="flex w-500 pt-8 card-text">
+                                        <img src="./img/Vector.png" alt="">2021年12月03日-2021年12月06日
+                                    </div>
+                                    <div class="flex w-500 pt-8 card-text">
+                                        <img src="./img/G.png" alt="">屏東縣
+                                    </div>   
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="col-50 col-lg-25 px-56 pt-192 flex-shrink-0">
+                <div class="card">
+                    <div class="card-img p-size-85 flex position-relative">
+                        <img class=" inset" src="./img/1921.png" alt="">
+                        <div id=taget3 class="taget-img"><a href="###">taget</a></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="align-items-center h-100 ">
+                            <div class="card-title text-ellipsis flex-grow-1">小琉球自淺之旅山</div>
+                                <div class="card-icon flex-shrink-0">
+                                    <div class="flex w-500 pt-8 card-text">
+                                        <img src="./img/Vector.png" alt="">2021年12月03日-2021年12月06日
+                                    </div>
+                                    <div class="flex w-500 pt-8 card-text">
+                                        <img src="./img/G.png" alt="">屏東縣
+                                    </div>   
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>        
+        </section> 
+        <section>
+            <div class="s2-back position-absolute"></div>
+                <div class="flex w-100 justify-content-center">
+                    <div class="s2-title">推薦景點TOP 10</div>
+                    <div class="yellow-border"></div>
+                </div>
+                <div class="flex">
+                    <div id=left2 class=""><a href="##">left2</a></div>
+                        <div class="col-50 col-lg-25 flex-shrink-0">
+                            <div class="card">
+                                <div class="card-img p-size-85 flex position-relative">
+                                    <img class=" inset" src="./img/1921.png" alt="">
+                                </div>
+                            </div>
+                        </div> 
+                    <div id=right2 class=""><a href="##">right2</a></div>
+                </div>                   
+            </div>
+        </section>    
+    </main>
+    
+</body>
+</html>
